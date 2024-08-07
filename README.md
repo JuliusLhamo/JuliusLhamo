@@ -6,5 +6,5 @@ I'm a Bachelor's student, currently studying Statistics and Data Science at the 
 
 Here are some of my projects:
 
-- [Jim's Kitchen](https://github.com/JuliusLhamo/JimsKitchenPublic)
+- *models and agents project in finance coming soon*
 - [Multicalibration/Multiaccuracy](https://github.com/JuliusLhamo/MA_MC)
