@@ -27,17 +27,17 @@ I am an AI Master's student at the **University of Zurich** with a background in
 
 ### 🧪 Featured Projects
 
-#### 🤖 [Federated Safe Policy-Model Iteration (F-SPMI)]
+#### 🤖 Federated Safe Policy-Model Iteration (F-SPMI)
 * Developed a parallelized variant of the SPMI algorithm for safety-critical Reinforcement Learning.
 * Implemented **Gaussian Process-based model selection** and UCB sampling to improve exploration efficiency.
 * Built a flexible framework in Python supporting both tabular and neural network policies.
 
-#### 🎬 [Multi-Modal Movie QA Agent]
+#### 🎬 Multi-Modal Movie QA Agent
 * A hybrid QA system combining **Symbolic Reasoning (SPARQL)** and **Latent Space Inference (TransE)**.
 * Uses the Wikidata Knowledge Graph to resolve complex natural language queries about the film industry.
 * Features an end-to-end pipeline for entity disambiguation and vector-based similarity search.
 
-#### 📈 [Deep Learning for Stock Market Gaps]
+#### 📈 Deep Learning for Stock Market Gaps
 * *Bachelor Thesis:* Comparative analysis of **LSTMs vs. GRUs** for detecting market volatility.
 * Integrated a **Double Deep Q-Network (DDQN)** agent to simulate trading strategies in backtesting environments.
 * Utilized WandB for hyperparameter sweep optimization across 1000+ US companies.
