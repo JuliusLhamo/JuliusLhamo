@@ -46,7 +46,7 @@ I am an AI Master's student at the **University of Zurich** with a background in
 ---
 
 ### 📫 Connect with me
-* **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/juliuslandes)
+* **LinkedIn:** [Julius Landes](https://linkedin.com/in/juliuslandes)
 * **Languages:** German (Native), English (C1)
 
 ---
