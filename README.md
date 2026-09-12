@@ -2,7 +2,7 @@
 
 ### M.Sc. Artificial Intelligence @ UZH | Data Engineer @ Swissgrid
 
-I'm an AI Master's student at the **University of Zurich**, with a background in **Statistics and Data Science** from **LMU Munich**. My work sits at the intersection of production data platform engineering and multi-agent machine learning — building pipelines that have to survive contact with real operational load, and studying systems where several strategic actors interact.
+I'm an AI Master's student at the **University of Zurich**, with a background in **Statistics and Data Science** from **LMU Munich**. My work sits at the intersection of production data platform engineering, blockchain infrastructure, and adversarial machine learning — building systems that have to survive real operational load and studying how strategic agents interact with market mechanisms.
 
 ---
 
@@ -10,7 +10,7 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 
 * **Data Engineer at Swissgrid** (Performance Monitoring), building ETL pipelines, an ENTSO-E transformation microservice, and the monitoring and orchestration around them.
 * **Building MAP**, a self-hosted, production-grade blockchain data platform at the UZH Blockchain Center — currently extending it toward Kubernetes, GitOps and a Delta Lake medallion architecture.
-* **Finishing my Master's thesis** on identity-aware multi-agent representations for DeFi oracle security.
+* **Building OracleBench**, a configurable adversarial stress-testing framework for DeFi price oracles using reinforcement learning, self-play and multi-agent game solving to discover manipulation strategies and measure mechanism robustness.
 
 ---
 
@@ -40,13 +40,15 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 * Full observability with **Prometheus + Grafana**; data integrity cross-validated against Dune Analytics and Etherscan to bit-identical aggregate results.
 * **Now extending it:** Kubernetes with Helm and Argo CD (GitOps), object storage plus Delta Lake in a Bronze/Silver/Gold medallion design, Spark Structured Streaming, and explicit data contracts, quality gates, lineage and catalog metadata.
 
-#### 🔮 Identity-Aware Multi-Agent Representations for DeFi Oracle Security
-*Master's Thesis, University of Zurich*
+#### 🔮 OracleBench — Adversarial Stress Testing for DeFi Price Oracles
+*Research Project, University of Zurich*
 
-* Models competitive price-oracle manipulation as a **finite-population multi-agent stochastic game**, where attackers jointly move the market price while competing individually for block inclusion and a downstream prize.
-* Proves an **aggregate non-identifiability result**: identical aggregate order flow and oracle trajectories can imply different private manipulation costs, lower-bounding the error of purely aggregate representations.
-* Designs an **identity-aware representation** separating anonymous market-impact statistics from contest-specific signals (bid rank, inclusion status, execution position, flow ahead).
-* Role-indexed **JPSRO / coarse-correlated-equilibrium** evaluation with per-role deviation certificates and held-out best responses, under a 20-seed confirmatory protocol with paired bootstrap CIs and SHA-256 experiment manifests.
+* Building a modular framework that models market-mediated oracle manipulation as a **partially observable stochastic game** between attackers, arbitrageurs, transaction-ordering agents and an optional defender.
+* Uses **PPO/IPPO, self-play and Policy-Space Response Oracles (PSRO)** as strategy-search methods to discover adversarial policies rather than relying on a single hand-designed attack model.
+* Supports configurable **markets, oracle mechanisms, attacker populations, transaction-ordering rules and oracle consumers**, producing robustness profiles across manipulation success, cost, distortion, persistence, profitability, bidding and free-riding.
+* Current implementation includes a **constant-product CFMM**, spot and arithmetic-TWAP oracles, first-come and priority-auction ordering, and multi-agent learning/evaluation workflows.
+* Extending the framework with a **mechanism-faithful Uniswap v3 reference environment** using concentrated liquidity, tick crossing, fee accounting, cumulative-tick TWAPs, historical pool-state calibration and replay-based validation.
+* Designed as a reusable research benchmark with analytical credibility tests, held-out configurations, multi-seed evaluation and reproducible experiment manifests.
 
 #### 🤖 Federated Safe Policy-Model Iteration (F-SPMI)
 *Reinforcement Learning Research, University of Zurich*
