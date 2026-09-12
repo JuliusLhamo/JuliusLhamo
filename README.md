@@ -57,17 +57,6 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 * Benchmarked greedy local selection against **GP-driven (UCB) exploration**, quantifying the trade-off between sample efficiency, scalability and asymptotic performance.
 * Flexible Python framework supporting both tabular and neural network policies.
 
-#### 🎬 Multi-Modal Movie QA Agent
-
-* Hybrid QA system combining **symbolic reasoning (SPARQL)** with **latent space inference (TransE)** over the Wikidata knowledge graph.
-* End-to-end pipeline for entity disambiguation and vector-based similarity search.
-
-#### 📈 Deep Learning for Stock Market Gaps
-*Bachelor Thesis*
-
-* Comparative analysis of **LSTMs vs. GRUs** for detecting market volatility, with a **Double Deep Q-Network** agent simulating trading strategies in backtesting environments.
-* WandB hyperparameter sweeps across 1000+ US companies.
-
 ---
 
 ### 📫 Connect with me
