@@ -28,7 +28,7 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 
 ---
 
-### 🧪 Featured Projects
+### 🧪 Featured Projects (outdated, updated soon)
 
 #### 🧱 MAP — Self-Hosted ETL & Lakehouse Platform for EVM Blockchain Data
 *University of Zurich, Blockchain Center — Master's Project*
