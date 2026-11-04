@@ -40,22 +40,7 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 * Full observability with **Prometheus + Grafana**; data integrity cross-validated against Dune Analytics and Etherscan to bit-identical aggregate results.
 * **Now extending it:** Kubernetes with Helm and Argo CD (GitOps), object storage plus Delta Lake in a Bronze/Silver/Gold medallion design, Spark Structured Streaming, and explicit data contracts, quality gates, lineage and catalog metadata.
 
-#### 🔮 OracleBench — Adversarial Stress Testing for DeFi Price Oracles
-*Research Project, University of Zurich*
-
-* Building a modular framework that models market-mediated oracle manipulation as a **partially observable stochastic game** between attackers, arbitrageurs, transaction-ordering agents and an optional defender.
-* Uses **PPO/IPPO, self-play and Policy-Space Response Oracles (PSRO)** as strategy-search methods to discover adversarial policies rather than relying on a single hand-designed attack model.
-* Supports configurable **markets, oracle mechanisms, attacker populations, transaction-ordering rules and oracle consumers**, producing robustness profiles across manipulation success, cost, distortion, persistence, profitability, bidding and free-riding.
-* Current implementation includes a **constant-product CFMM**, spot and arithmetic-TWAP oracles, first-come and priority-auction ordering, and multi-agent learning/evaluation workflows.
-* Extending the framework with a **mechanism-faithful Uniswap v3 reference environment** using concentrated liquidity, tick crossing, fee accounting, cumulative-tick TWAPs, historical pool-state calibration and replay-based validation.
-* Designed as a reusable research benchmark with analytical credibility tests, held-out configurations, multi-seed evaluation and reproducible experiment manifests.
-
-#### 🤖 Federated Safe Policy-Model Iteration (F-SPMI)
-*Reinforcement Learning Research, University of Zurich*
-
-* Parallelized variant of the **SPMI** algorithm for Configurable MDPs, using centralized federated learning principles to accelerate learning while preserving safety guarantees.
-* Benchmarked greedy local selection against **GP-driven (UCB) exploration**, quantifying the trade-off between sample efficiency, scalability and asymptotic performance.
-* Flexible Python framework supporting both tabular and neural network policies.
+updates coming soon...
 
 ---
 
