@@ -2,15 +2,16 @@
 
 ### M.Sc. Artificial Intelligence @ UZH | Data Engineer @ Swissgrid
 
-I'm an AI Master's student at the **University of Zurich**, with a background in **Statistics and Data Science** from **LMU Munich**. My work sits at the intersection of production data platform engineering, blockchain infrastructure, and adversarial machine learning — building systems that have to survive real operational load and studying how strategic agents interact with market mechanisms.
+I'm an AI Master's student at the **University of Zurich**, with a background in **Statistics and Data Science** from **LMU Munich**. I build data platforms for energy and blockchain research, and study how to evaluate agents against exact, executable mechanisms. My interests connect data engineering, distributed systems, adversarial machine learning and verifiable agent evaluation.
 
 ---
 
 ### 🚀 Currently...
 
-* **Data Engineer at Swissgrid** (Performance Monitoring), building ETL pipelines, an ENTSO-E transformation microservice, and the monitoring and orchestration around them.
-* **Building MAP**, a self-hosted, production-grade blockchain data platform at the UZH Blockchain Center — currently extending it toward Kubernetes, GitOps and a Delta Lake medallion architecture.
-* **Building OracleBench**, a configurable adversarial stress-testing framework for DeFi price oracles using reinforcement learning, self-play and multi-agent game solving to discover manipulation strategies and measure mechanism robustness.
+- **Data Engineer at Swissgrid** (Performance Monitoring), building energy-market ETL pipelines, an ENTSO-E transformation microservice, and the validation, orchestration and monitoring around them.
+- **Building MAP** at UZH: a self-hosted blockchain research platform, with current work on reliable history APIs and a Kubernetes/GitOps migration.
+- **Developing DeFiTrials**, my Master's thesis project on execution-verified tasks for agents interacting with deployed programs.
+- **Researching DeFi oracle robustness with OracleBench**, combining exact protocol simulation, historical replay and adversarial strategy search.
 
 ---
 
@@ -19,32 +20,48 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 | Category | Tools & Technologies |
 | :--- | :--- |
 | **Languages** | Python, SQL, C++, Java |
-| **Data & Storage** | ClickHouse, Kafka, Delta Lake *(in progress)*, Elasticsearch, Redis |
-| **Pipelines & Orchestration** | Temporal, Camunda, FME, Spark Structured Streaming *(in progress)* |
-| **Platform & DevOps** | Docker, Kubernetes *(in progress)*, Helm, Argo CD, Terraform *(in progress)*, Git, CI/CD |
-| **Services** | FastAPI, REST API design, multi-tenant auth & rate limiting, XSD/XML validation |
-| **Observability** | Prometheus, Grafana, OpenTelemetry, Tableau, Weights & Biases |
-| **AI / ML** | PyTorch, Multi-Agent RL, Self-Play (PSRO, FSP), CMDPs, NLP (RAG), LSTMs/GRUs |
+| **Data & Storage** | ClickHouse, Kafka, Redis, Elasticsearch, Delta Lake (shadow pipeline) |
+| **Pipelines & Orchestration** | Temporal, Camunda, FME, Spark Structured Streaming |
+| **Platform & DevOps** | Docker, Kubernetes (kind rehearsals; k3s migration in progress), Kustomize, Argo CD, GitHub Actions, GHCR, Git |
+| **Services** | FastAPI, REST API design, scoped access control, distributed rate limiting, XSD/XML validation |
+| **Observability** | Prometheus, Grafana, OpenTelemetry, Grafana Tempo, Tableau, Weights & Biases |
+| **AI / ML** | PyTorch, reinforcement learning, multi-agent learning, NLP/RAG, LSTMs/GRUs |
+| **Verification** | Foundry, differential testing, exact integer simulation, historical replay |
 
 ---
 
-### 🧪 Featured Projects (outdated, updated soon)
+### 🧪 Featured Projects
 
-#### 🧱 MAP — Self-Hosted ETL & Lakehouse Platform for EVM Blockchain Data
-*University of Zurich, Blockchain Center — Master's Project*
+#### 🧱 MAP — Multichain Analytics Platform
 
-* Production-grade ETL ingesting seven canonical EVM data types (blocks, transactions, events, traces, contracts, native and ERC-20 transfers) across **25M+ Ethereum blocks** into **ClickHouse**, running as **22 Docker services** against a private Erigon archive node.
-* **Kafka-buffered, Temporal-orchestrated** architecture that decouples the control plane from the data write path, enabling idempotent, restart-safe backfills of billions of rows.
-* **Multi-tenant serving layer**: FastAPI REST API (16 workers), API-key auth with permission tiers, Redis-backed distributed rate limiting, atomically provisioned per-consumer ClickHouse workspaces.
-* Protocol-decoding subsystem for curated protocols (Uniswap V2, Aave V3, ERC-20) and arbitrary user-registered contracts, including runtime discovery of dynamically created contracts.
-* Full observability with **Prometheus + Grafana**; data integrity cross-validated against Dune Analytics and Etherscan to bit-identical aggregate results.
-* **Now extending it:** Kubernetes with Helm and Argo CD (GitOps), object storage plus Delta Lake in a Bronze/Silver/Gold medallion design, Spark Structured Streaming, and explicit data contracts, quality gates, lineage and catalog metadata.
+*University of Zurich, Blockchain & DLT Group — Master's Project & Independent Study*
 
-updates coming soon...
+- **Ethereum data at scale:** a stored release covering **26M+ blocks**, a **3.73B-event token-transfer index**, and a discovery catalog of **1.83M contracts** in ClickHouse.
+- **Durable ingestion:** Cryo/web3.py → transactional Kafka → ClickHouse, orchestrated with **Temporal**, with **250-block checkpoints**, coverage tracking, restart-safe backfills and synchronization against the provider's finalized head.
+- **Research access:** FastAPI APIs, scoped keys, normal/admin roles, Redis-backed request limits and project-table workspaces. Resumable Parquet imports include schema review and reconciliation; a **973 MB / 999,424-row** local trial completed alongside reads and chain ingestion.
+- **Multichain validation:** bounded Alchemy pilots on **Polygon, Arbitrum, Base and BNB Smart Chain**, reconciling blocks, transactions and logs against frozen provider payloads over four blocks per chain.
+- **Lakehouse prototype:** a blocks-only **Spark/Delta Lake shadow pipeline** with Bronze/Silver/Gold transformations, schema contracts and quarantine; replay, recovery and time travel tested on synthetic workloads up to **100K blocks**.
+- **Current work:** snapshot-bound history pagination in an isolated, tested API release candidate, plus a **k3s/Argo CD** migration design for **dev → staging → production**. The serving platform currently runs on Docker Compose.
+
+#### 🧠 DeFiTrials — Verifiable Tasks for Agents on Deployed Programs
+
+*University of Zurich, Blockchain & DLT Group — Master's thesis project, in development*
+
+- Designing three task families on pinned Ethereum state: **Predict** transaction effects, **Formalise** exact models from source or bytecode, and **Construct** transactions that reach a goal.
+- Designing independent graders around **deterministic EVM re-execution**, hidden differential tests, symbolic equivalence and bounded infeasibility proofs, including unreachable goals that test whether an agent correctly declines.
+- Building on an **exact integer Uniswap v3 engine** validated in **668 Foundry differential scenarios**. Planned evaluation includes frozen tool-using agents, counterfactual tasks to resist answer lookup, and a bounded **GRPO reward-signal study**.
+
+#### 🔬 OracleBench — Adversarial Stress Testing for DeFi Price Oracles
+
+- A configurable research framework for oracle manipulation, with exact Uniswap v3 mechanics, oracle and market parameters, and a Uniswap v4 truncated-oracle hook model.
+- Historical replay validated on **90 held-out mainnet windows**, covering **7,336 trace-backed swaps**, with exact no-attack controls.
+- Research directions include **reinforcement learning, self-play and PSRO** for discovering manipulation strategies and comparing mechanism robustness.
 
 ---
 
 ### 📫 Connect with me
 
-* **LinkedIn:** [Julius Landes](https://linkedin.com/in/juliuslandes)
-* **Languages:** German (Native), English (C1)
+- **LinkedIn:** [Julius Landes](https://linkedin.com/in/juliuslandes)
+- **Languages:** German (Native), English (C1)
+
+*Updated November 2026.*
