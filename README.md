@@ -10,8 +10,8 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 
 - **Data Engineer at Swissgrid** (Performance Monitoring), building energy-market ETL pipelines, an ENTSO-E transformation microservice, and the validation, orchestration and monitoring around them.
 - **Building MAP** at UZH: a self-hosted blockchain research platform, with current work on reliable history APIs and a Kubernetes/GitOps migration.
-- **Developing DeFiTrials**, my Master's thesis project on execution-verified tasks for agents interacting with deployed programs.
-- **Researching DeFi oracle robustness with OracleBench**, combining exact protocol simulation, historical replay and adversarial strategy search.
+- **Developing ChainKernel**, my Master's thesis project on execution-verified tasks for agents interacting with deployed programs.
+
 
 ---
 
