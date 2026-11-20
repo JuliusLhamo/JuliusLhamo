@@ -43,19 +43,13 @@ I'm an AI Master's student at the **University of Zurich**, with a background in
 - **Lakehouse prototype:** a blocks-only **Spark/Delta Lake shadow pipeline** with Bronze/Silver/Gold transformations, schema contracts and quarantine; replay, recovery and time travel tested on synthetic workloads up to **100K blocks**.
 - **Current work:** snapshot-bound history pagination in an isolated, tested API release candidate, plus a **k3s/Argo CD** migration design for **dev → staging → production**. The serving platform currently runs on Docker Compose.
 
-#### 🧠 DeFiTrials — Verifiable Tasks for Agents on Deployed Programs
+#### 🧠 ChainKernel — Verifiable Tasks for Agents on Deployed Programs
 
 *University of Zurich, Blockchain & DLT Group — Master's thesis project, in development*
 
 - Designing three task families on pinned Ethereum state: **Predict** transaction effects, **Formalise** exact models from source or bytecode, and **Construct** transactions that reach a goal.
 - Designing independent graders around **deterministic EVM re-execution**, hidden differential tests, symbolic equivalence and bounded infeasibility proofs, including unreachable goals that test whether an agent correctly declines.
 - Building on an **exact integer Uniswap v3 engine** validated in **668 Foundry differential scenarios**. Planned evaluation includes frozen tool-using agents, counterfactual tasks to resist answer lookup, and a bounded **GRPO reward-signal study**.
-
-#### 🔬 OracleBench — Adversarial Stress Testing for DeFi Price Oracles
-
-- A configurable research framework for oracle manipulation, with exact Uniswap v3 mechanics, oracle and market parameters, and a Uniswap v4 truncated-oracle hook model.
-- Historical replay validated on **90 held-out mainnet windows**, covering **7,336 trace-backed swaps**, with exact no-attack controls.
-- Research directions include **reinforcement learning, self-play and PSRO** for discovering manipulation strategies and comparing mechanism robustness.
 
 ---
 
